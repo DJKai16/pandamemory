@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DanJah | Blog 2025 - Descargas.</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><img src="img/logoweb.png" alt="logo DanJah"></div>
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html">Ir a inicio</a></li>
+                    <li><a href="videos.html">Descargas</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    
+                    <li class="search-box">
+                        <input type="text"id="searchInput"  placeholder="Buscar algo...">
+                        <span class="search-icon" onclick="performSearch()">&#128269;</span>
+                       
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+       
+    </header>
+    <div class="container">
+
+        <div class="blog-post">
+            <img src="img/freefire_web.webp" alt="Imagen 1">
+            <h2 id="freefire">FREE FIRE 2024</h2>
+            <p>[Nuevo evento - Caos] ¡Vota para provocar raros incidentes, como aviones fuera de control y hongos modificados!
+                [Nuevo personaje - Ryden] Libera una araña robot que limita el movimiento enemigo y daña con el tiempo..</p>
+                <button class="descargar" data-url="https://play.google.com/store/apps/details?id=com.dts.freefireth" onclick="iniciarDescarga(10)">Descargar Free Fire</button>
+        </div>
+        <div class="blog-post">
+            <img src="img/dls_2024.webp" alt="Imagen 2">
+            <h2>DLS 2024</h2>
+            <p>Vuelve a demostrar tus habilidades como entrenador y jugador de fútbol en Dream League Soccer 2024, la nueva entrega de la saga con licencia oficial FIFPro.</p>
+            <button class="descargar" data-url="https://play.google.com/store/apps/details?id=com.firsttouchgames.dls7&hl=es" onclick="iniciarDescarga(15)">Descargar DLS 2024</button>
+        </div>
+        <div class="blog-post">
+            <img src="img/bajoterra.jpg" alt="Imagen 3">
+            <h2 id="terror">BAJO TERRA 2024</h2>
+            <p>En Slugterra: Slug It Out 2 descenderás a las cavernas subterráneas de Slugterra para ayudar a Eli a derrotar a sus enemigos a base de lanzarles babosas.</p>
+            <button class="descargar" data-url="https://play.google.com/store/apps/details?id=com.dhxmedia.slugitout2" onclick="iniciarDescarga(15)">Descargar Bajo Terra</button>
+        </div>
+        <div class="blog-post">
+            <img src="img/macro_2.webp" alt="Imagen 4">
+            <h2>Sensi Onetap Macro GFX Pro</h2>
+            <p>Disfrute de una foto perfecta en la cabeza con la herramienta Sensi Onetap Macro GFX Pro para obtener solo un rojo perfecto..</p>
+            <button class="descargar" data-url="https://play.google.com/store/apps/details?id=com.sensiboost.pro" onclick="iniciarDescarga(15)">Descargar Macro</button>
+        </div>
+
+        <div class="blog-post">
+            <img src="img/tongue-out.png" alt="Imagen 4">
+            <h2>MEMORIA FRUTAL 5 </h2>
+            <p>Nuevo Juevo de Memoria frutal .</p>
+            <button class="descargar" data-url="https://www.mediafire.com/file/pguwhafbi35e8rq/Memoria_Frutal_6_1_1.0.apk/file" onclick="iniciarDescarga(15)">Descargar MF5</button>
+        </div>
+
+
+        <div class="blog-post">
+            <img src="img/crocodile.png" alt="Imagen 4">
+            <h2>MEMORY ROOMS </h2>
+            <p>Descarga el nuevo juego de memory rooms, avanza entre los niveles y gana recompensas para canjearlos por lo que mas te gusta ,como diamantes para free fire, y mas.</p>
+            <button class="descargar" data-url="https://www.mediafire.com/file/0rpa9mes4die70q/Memory_Rooms_2_1_1.0.apk/file" onclick="iniciarDescarga(15)">Descargar MA2</button>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo"><img src="img/logoweb.png" alt="Logo DanJah"></div>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class="fa fa-facebook"></i></a>
+                    <a href="#" class="icon"><i class="fa fa-twitter"></i></a>
+                    <a href="#" class="icon"><i class="fa fa-instagram"></i></a>
+                    <a href="#" class="icon"><i class="fa fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div class="footer-text">
+                &copy; 2024 Mi Blog | Todos los derechos reservados
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        function iniciarDescarga(tiempo) {
+            var boton = event.target;
+            boton.disabled = true;
+            boton.textContent = "Descargando...";
+
+            var intervalo = setInterval(function() {
+                tiempo--;
+                if (tiempo <= 0) {
+                    clearInterval(intervalo);
+                    descargarArchivo(boton);
+                } else {
+                    boton.textContent = "Espere..." + tiempo + " segundos";
+                }
+            }, 1000);
+        }
+
+        function descargarArchivo(boton) {
+            var url = boton.getAttribute("data-url");
+            window.location.href = url; // Redirigir a la URL del archivo
+        }
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
