@@ -317,3 +317,28 @@ footer {
    margin-top: 10px;
    font-size: 14px;
 }
+
+.loader {
+   border: 16px solid #e3ecdf; /* Light grey */
+   border-top: 16px solid #f11726; /* Blue */
+   border-radius: 50%;
+   width: 120px;
+   height: 120px;
+   animation: spin 2s linear infinite;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin-top: -60px; /* Half of width */
+   margin-left: -60px; /* Half of height */
+ }
+ 
+ @keyframes spin {
+   0% { transform: rotate(0deg); }
+   100% { transform: rotate(360deg); }
+ }
+ 
+ /* Ocultar el contenido hasta que se cargue completamente */
+ .content {
+   display: none;
+ }
+ 
