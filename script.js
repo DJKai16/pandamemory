@@ -1,3 +1,18 @@
+window.addEventListener('load', function() {
+    var loader = document.getElementById('loader');
+    var content = document.getElementById('content');
+  
+    // Mostrar el loader y mensaje de "Cargando..." inicialmente
+    loader.style.display = 'block';
+    content.style.display = 'none';
+  
+    // Ocultar el loader y mostrar el contenido después de ciertos segundos (por ejemplo, 3 segundos)
+    setTimeout(function() {
+      loader.style.display = 'none';
+      content.style.display = 'block';
+    }, 3000); // 3000 milisegundos = 3 segundos
+  });
+
 const menuToggle = document.querySelector(".menu-toggle");
 const menu = document.querySelector(".menu");
 menuToggle.addEventListener("click", () => {
