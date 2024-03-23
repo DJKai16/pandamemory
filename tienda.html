@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="loader" id="loader"></div>
+    <div class="content" id="content">
+
+      <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo"><img src="img/logoweb.png" alt="logo DanJah"></div>
+                <div class="menu-toggle">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                    <li><a href="descargas.html"><i class="fa-solid fa-download"></i>Descargas</a></li>
+                    <li><a href="tienda.html"> <i class="fa-solid fa-cart-shopping"></i>Tienda</a></li>
+                    <li><a href="#"><i class="fa-solid fa-id-card"></i>Contacto</a></li> 
+                    <li class="search-box">
+                        <input type="text"id="searchInput"  placeholder="Buscar Juegos, Archivos...">
+                        <span class="search-icon" onclick="performSearch()">&#128269;</span>
+                       
+                    </li>
+                    
+                </ul>
+            </div>
+        </nav>
+       
+    </header>
+
+
+
+    <div id="productos">
+      <!-- Aquí se agregarán los productos dinámicamente con JavaScript -->
+    </div>
+  
+    <div id="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito">
+        <!-- Los productos seleccionados se agregarán aquí -->
+      </ul>
+      <button id="mostrar-formulario">Realizar Compra</button>
+    </div>
+  
+    <div id="formulario" style="display: none;">
+      <form id="datos-cliente">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <input type="checkbox" id="aceptar-terminos" required>
+        <label for="aceptar-terminos">Acepto los términos y condiciones</label><br><br>
+        <button type="submit">Realizar Pedido</button>
+      </form>
+    </div>
+  
+    <a href="#" id="mostrar-terminos">Ver Términos y Condiciones</a>
+  
+    <div id="modal-terminos" class="modal">
+      <div class="modal-contenido">
+        <span class="cerrar-modal">&times;</span>
+        <h2>Términos y Condiciones</h2>
+        <!-- Aquí colocas el contenido completo de tus términos y condiciones -->
+        <p>Política de Privacidad:
+
+          "En nuestra tienda en línea, respetamos y valoramos la privacidad de nuestros clientes. Esta política de privacidad describe cómo recopilamos, utilizamos y protegemos la información que usted proporciona al utilizar nuestros servicios.
+          
+          Recopilación de información:
+          
+          Recopilamos información personal que usted nos proporciona al realizar una compra o registrarse en nuestra tienda en línea. Esta información puede incluir su nombre, dirección de correo electrónico, dirección postal, número de teléfono y detalles de pago.
+          También podemos recopilar información automáticamente cuando usted visita nuestro sitio web, incluyendo su dirección IP, tipo de navegador, páginas visitadas y tiempo de visita.
+          Uso de la información:
+          
+          Utilizamos la información que recopilamos para procesar sus pedidos, proporcionarle servicios personalizados y mejorar su experiencia de compra.
+          No compartimos su información personal con terceros, excepto cuando sea necesario para procesar sus pedidos o cumplir con la ley.
+          Protección de la información:
+          
+          Implementamos medidas de seguridad para proteger su información personal contra pérdida, uso indebido y acceso no autorizado.
+          Al aceptar nuestra política de privacidad, usted reconoce y acepta el procesamiento de su información personal de acuerdo con los términos de esta política."
+          
+          Términos de Servicio:
+          
+          "Al utilizar nuestra tienda en línea, usted acepta cumplir con los siguientes términos y condiciones:
+          
+          Usted es responsable de mantener la confidencialidad de su cuenta y contraseña, y de restringir el acceso a su computadora y cuenta.
+          Usted acepta proporcionar información precisa y completa al realizar una compra en nuestra tienda en línea.
+          Nos reservamos el derecho de rechazar o cancelar cualquier pedido que considere necesario.
+          Nos reservamos el derecho de modificar o discontinuar cualquier parte de nuestro servicio en cualquier momento.
+          Al aceptar nuestros términos de servicio, usted acepta cumplir con todas las políticas y procedimientos descritos en este documento."
+          
+          Ahora, para implementar un checkbox para que los usuarios acepten estos términos antes de continuar, puedes agregar el siguiente código HTML justo antes del botón de "Realizar Pedido" en tu formulario de datos del cliente:.</p>
+      </div>
+    </div>
+
+  <footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-logo"><img src="img/logoweb.png" alt="Logo DanJah"></div>
+            <div class="social-icons">
+                <a href="#" class="icon"><i class="fa fa-facebook"> Facebook</i></a>
+                <a href="#" class="icon"><i class="fa fa-twitter"> Twitter</i></a>
+                <a href="#" class="icon"><i class="fa fa-instagram"> Instagram</i></a>
+                <a href="#" class="icon"><i class="fa fa-pinterest"> Pinterest</i></a>
+            </div>
+        </div>
+        <div class="footer-text">
+            &copy; 2024 Mi Blog | Todos los derechos reservados
+        </div>
+    </div>
+</footer>
+
+
+
+</div>
+
+
+
+  <script src="tienda.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
