@@ -76,6 +76,10 @@ header {
     background-color: #12e1b4;
 }
 
+.menu i {
+   margin-right: 5px;
+}
+
 /* Estilos para hacer el menú responsive */
 @media screen and (max-width: 876px) {
    header {
@@ -92,7 +96,7 @@ header {
        display: none;
        flex-direction: column;
        text-align: center;
-       background: rgb(5,133,209);
+       background: gold;
        position: absolute;
        top: 45px;
        left: 0;
@@ -112,14 +116,14 @@ header {
    }
    .menu a {
       text-decoration: none;
-      color: #fff;
+      color: black;
       border: none;
       padding: 5px 10px;
       border-radius: 5px;
       font-weight: bold;
    }
    .menu a:hover {
-      background-color: #24020b;
+      background-color: #f4eeef;
       width: 50%;
       padding: 10px;
    }
@@ -143,6 +147,7 @@ header {
    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
    background-color: #fff;
    margin-top: 90px;
+   border-radius: 15px;
 }
 
 .blog-post img {
@@ -165,6 +170,9 @@ header {
 .blog-post p {
    font-size: 16px;
    margin-top: 10px;
+}
+.blog-post a {
+   font-size: 12px;
 }
 
 .btn {
@@ -281,7 +289,10 @@ footer {
    text-align: center;
    bottom: 0;
    width: 100%;
+   margin-top:6px;
 }
+
+
 
 .footer-content {
    display: flex;
@@ -297,6 +308,10 @@ footer {
    width: 40px;
 }
 
+.social-icons .icon i {
+   margin-right: 5px;
+}
+
 .social-icons {
    display: flex;
    margin: 8px;
@@ -305,7 +320,7 @@ footer {
 .social-icons .icon {
    margin-right: 10px;
    color: #fff;
-   font-size: 18px;
+   font-size: 12px;
    text-decoration: none;
 }
 
@@ -315,9 +330,11 @@ footer {
 
 .footer-text {
    margin-top: 10px;
-   font-size: 14px;
+   font-size: 12px;
 }
 
+
+/* estilos al loader  de la pagina descargas.html*/
 .loader {
    border: 16px solid #e3ecdf; /* Light grey */
    border-top: 16px solid #f11726; /* Blue */
@@ -341,7 +358,8 @@ footer {
  .content {
    display: none;
  }
-/* estilos a la tienda */
+ 
+ /* estilos a la tienda */
 
  #productos {
    display: grid;
@@ -439,6 +457,15 @@ footer {
  }
 
  /* Estilos para el formulario de compras */
+
+a {
+   color: #1877f2;
+   text-align: center;
+   padding: 0 20px;
+   margin: 8px;
+}
+
+
 #formulario {
    display: none; /* El formulario estará oculto al principio */
    margin-top: 20px;
@@ -465,7 +492,7 @@ footer {
  
  #datos-cliente input[type="checkbox"] {
    width: 100%;
-   height: 10px;
+   height: 20px;
    margin-bottom: 10px;
    margin: auto;
    display: flex;
@@ -499,4 +526,6 @@ footer {
    font-size: 16px; /* Tamaño del texto */
    transition: background-color 0.3s ease; /* Transición suave del color de fondo */
  }
- 
+ #resumen-compra {
+   display: none;
+ }
