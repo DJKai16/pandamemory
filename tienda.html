@@ -46,14 +46,14 @@
     </div>
   
     <div id="carrito">
-      <h2>Carrito de Compras</h2>
+      <h2>Compras Onlinne</h2>
       <ul id="lista-carrito">
         <!-- Los productos seleccionados se agregarán aquí -->
       </ul>
       <button id="mostrar-formulario">Realizar Compra</button>
     </div>
-  
-    <div id="formulario" style="display: none;">
+
+    <div id="formulario">
       <form id="datos-cliente">
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
@@ -61,9 +61,20 @@
         <input type="email" id="email" name="email" required><br><br>
         <input type="checkbox" id="aceptar-terminos" required>
         <label for="aceptar-terminos">Acepto los términos y condiciones</label><br><br>
+
+        <div id="resumen-compra">
+          <h2>Resumen de Compra</h2>
+          <p id="subtotal">Subtotal: $0</p>
+          <p id="envio">Costo de envío: $5</p>
+          <p id="total">Total: $0</p>
+        </div>
+
+
         <button type="submit">Realizar Pedido</button>
       </form>
     </div>
+  
+   
   
     <a href="#" id="mostrar-terminos">Ver Términos y Condiciones</a>
   
@@ -97,8 +108,7 @@
           Usted acepta proporcionar información precisa y completa al realizar una compra en nuestra tienda en línea.
           Nos reservamos el derecho de rechazar o cancelar cualquier pedido que considere necesario.
           Nos reservamos el derecho de modificar o discontinuar cualquier parte de nuestro servicio en cualquier momento.
-          Al aceptar nuestros términos de servicio, usted acepta cumplir con todas las políticas y procedimientos descritos en este documento."
-          </p>
+          Al aceptar nuestros términos de servicio, usted acepta cumplir con todas las políticas y procedimientos descritos en este documento.</p>
       </div>
     </div>
 
