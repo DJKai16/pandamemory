@@ -1,4 +1,3 @@
-// Funcionalidades JavaScript
 const productos = [
     { id: 1, nombre: "Mochila Kawiia", descripcion: "Juego de mochila kawiia", precio: 50.98, imagen: "img/mochila1.jpg" },
     { id: 2, nombre: "Smartwatch", descripcion: "Reloj Smartwatsh", precio: 80.89, imagen: "img/smartwash1.jpg" },
@@ -31,7 +30,7 @@ const productos = [
         <img src="${producto.imagen}" alt="${producto.nombre}">
         <h3>${producto.nombre}</h3>
         <p>${producto.descripcion}</p>
-        <p>Precio: $${producto.precio}</p>
+        <p>Precio: S/ ${producto.precio}</p>
         <button class="boton-comprar" onclick="agregarAlCarrito(${producto.id})">Comprar</button>
       `;
       contenedorProductos.appendChild(elementoProducto);
@@ -108,9 +107,9 @@ function mostrarResumenCompra() {
   const total = subtotal + costoEnvio;
   
   // Mostrar resumen de compra
-  subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
-  envioElement.textContent = `Costo de envío: $${costoEnvio.toFixed(2)}`;
-  totalElement.textContent = `Total: $${total.toFixed(2)}`;
+  subtotalElement.textContent = `Subtotal: S/${subtotal.toFixed(2)}`;
+  envioElement.textContent = `Costo de envío: S/${costoEnvio.toFixed(2)}`;
+  totalElement.textContent = `Total: S/${total.toFixed(2)}`;
   resumenCompra.style.display = "block";
 }
 
@@ -162,9 +161,9 @@ function mostrarResumenCompra() {
   // Calcular total
   const total = subtotal + costoEnvio;
   // Mostrar resumen de compra
-  subtotalElement.textContent = `Subtotal: $${subtotal.toFixed(2)}`;
-  envioElement.textContent = `Costo de envío: $${costoEnvio.toFixed(2)}`;
-  totalElement.textContent = `Total: $${total.toFixed(2)}`;
+  subtotalElement.textContent = `Subtotal: S/ ${subtotal.toFixed(2)}`;
+  envioElement.textContent = `Costo de envío: S/ ${costoEnvio.toFixed(2)}`;
+  totalElement.textContent = `Total: S/ ${total.toFixed(2)}`;
   resumenCompra.style.display = "block";
 }
 
