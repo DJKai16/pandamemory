@@ -324,6 +324,10 @@ footer {
    text-decoration: none;
 }
 
+.social-icons a {
+   font-size: 10px;
+}
+
 .social-icons .icon:hover {
    color: #3498db; /* Color al pasar el ratón por encima */
 }
