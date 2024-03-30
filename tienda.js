@@ -1,8 +1,14 @@
 const productos = [
-    { id: 1, nombre: "Mochila Kawiia", descripcion: "Juego de mochila kawiia", precio: 50.98, imagen: "img/mochila1.jpg" },
+    { id: 1, nombre: "Pulsera de Hilo", descripcion: "Pulsera de hilo, hecho a mano y con la mejor calidad de hilos, lleva un dijen de acero", precio: 24.98, imagen: "img/munay_hilo_an3.jpg" },
     { id: 2, nombre: "Smartwatch", descripcion: "Reloj Smartwatsh", precio: 80.89, imagen: "img/smartwash1.jpg" },
-    { id: 3, nombre: "Parlante Bluetooth", descripcion: "Parlante que siempre va contigo a donde quieras", precio: 49.99, imagen: "img/parlante2.jpg" },
-    { id: 4, nombre: "Parlantes Bluetooth", descripcion: "Hermoso y potente parlante a bluetooth.", precio: 55.99, imagen: "img/parlante1.jpg" }
+    { id: 3, nombre: "Pulsera con dijen ojo turco", descripcion: "Hermosa pulsera de hilo con dijen de ojito turco para el mal ojo del bebe o para uno mismo. diseño nuevo y elegante", precio: 24.99, imagen: "img/munay_hilo_an4.jpg" },
+    { id: 4, nombre: "pulsera de hilo", descripcion: "Hermosa pulsera de hilo hecha a mano de la mejor calidad, con dijen de caero inoxidable.", precio: 24.99, imagen: "img/munay_hilo_an2.jpg" },
+
+    { id: 1, nombre: "Pulsera de Hilo", descripcion: "Pulsera de hilo, hecho a mano y con la mejor calidad de hilos, lleva un dijen de acero", precio: 24.98, imagen: "img/munay_hilo_an2.jpg" },
+    { id: 2, nombre: "Smartwatch", descripcion: "Reloj Smartwatsh", precio: 80.89, imagen: "img/smartwash1.jpg" },
+    { id: 3, nombre: "Pulsera con dijen ojo turco", descripcion: "Hermosa pulsera de hilo con dijen de ojito turco para el mal ojo del bebe o para uno mismo. diseño nuevo y elegante", precio: 24.99, imagen: "img/munay_hilo_an4.jpg" },
+    { id: 4, nombre: "Mochila KWAI", descripcion: "Hermosa mochila kwai para regalar.", precio: 24.99, imagen: "img/mochila1.jpg" }
+    
   ];
 
   const contenedorProductos = document.getElementById("productos");
@@ -18,7 +24,7 @@ const productos = [
   const totalElement = document.getElementById("total");
   
   // Costo de envío
-  const costoEnvio = 5;
+  const costoEnvio = 10;
   
   // Función para mostrar los productos en la página
   function mostrarProductos() {
