@@ -83,7 +83,7 @@ header {
    header {
       position: sticky;
       top: 0;
-      
+      background-color: rgb(7, 81, 240);
    }
    
    .menu-toggle {
@@ -198,6 +198,18 @@ header {
    }
    .blog-post p {
       font-size: 12px;
+   }
+
+   .call {
+      flex-basis: calc(95% - 15px);
+      
+   }
+   .call img {
+      width: 70%;
+      height: auto;
+   }
+   .call p {
+      font-size: 10px;
    }
 
 }
@@ -354,7 +366,7 @@ footer {
    left: 0;
    width: 100%;
    height: 100%;
-   background-color: rgb(245, 244, 232);
+   background-color: rgb(7, 81, 240);
    display: flex;
    justify-content: center;
    align-items: center;
@@ -372,12 +384,12 @@ footer {
    width: 50px;
    height: 50px;
    border-radius: 50%;
-   border: 5px solid rgba(243, 9, 9, 0.895);
+   border: 5px solid rgba(7, 234, 19, 0.895);
    border-top-color: #fff;
    animation: spin 1s linear infinite;
  }
  #loader p {
-   color: #a0064b;
+   color: #e7f6fd;
    margin-left: 5px;
    font-weight: bold;
  }
