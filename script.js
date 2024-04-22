@@ -11,6 +11,12 @@ window.addEventListener('load', function() {
       content.style.display = 'block';
     }, 4000); // 3000 milisegundos = 3 segundos
   });
+  
+const menuToggle = document.querySelector(".menu-toggle");
+const menu = document.querySelector(".menu");
+menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("show-menu");
+});
 
 function performSearch() {
     const searchTerm = document.getElementById("searchInput").value.toLowerCase();
@@ -19,6 +25,10 @@ function performSearch() {
     // Por ejemplo, redirigir a las imágenes relacionadas con el término de búsqueda en la página de galería
     alert("Realizar búsqueda con: " + searchTerm);
 }
+
+// function para la fienda desde aqui.
+
+// hasta aqui. 
 
 
 
@@ -109,6 +119,3 @@ function downloadImage(imageUrl) {
         document.body.removeChild(link);
     }, 100);
 }
-
-
-
